@@ -50,13 +50,13 @@ def starsolo_velocity_anndata(input_dir, project_name):
 
 # List of project names and their corresponding input directories
 projects = [
-    ("/home/alicen/2024/PBMC/post_alignment/PBMC_TB_1/velocyto", "PBMC_TB_1"),
-    ("/home/alicen/2024/PBMC/post_alignment/PBMC_TB_2/velocyto", "PBMC_TB_2"),
-    ("/home/alicen/2024/PBMC/post_alignment/PBMC_TB_3/velocyto", "PBMC_TB_3"),
-    ("/home/alicen/2024/PBMC/post_alignment/PBMC_LTBI_1/velocyto", "PBMC_LTBI_1"),
-    ("/home/alicen/2024/PBMC/post_alignment/PBMC_LTBI_2/velocyto", "PBMC_LTBI_2"),
-    ("/home/alicen/2024/PBMC/post_alignment/PBMC_HC_1/velocyto", "PBMC_HC_1"),
-   ("/home/alicen/2024/PBMC/post_alignment/PBMC_HC_2/velocyto", "PBMC_HC_2")
+    ("/home/alicen/2024/PBMC/PBMC_TB_1/velocyto", "PBMC_TB_1"),
+    ("/home/alicen/2024/PBMC/PBMC_TB_2/velocyto", "PBMC_TB_2"),
+    ("/home/alicen/2024/PBMC/PBMC_TB_3/velocyto", "PBMC_TB_3"),
+    ("/home/alicen/2024/PBMC/PBMC_LTBI_1/velocyto", "PBMC_LTBI_1"),
+    ("/home/alicen/2024/PBMC/PBMC_LTBI_2/velocyto", "PBMC_LTBI_2"),
+    ("/home/alicen/2024/PBMC/PBMC_HC_1/velocyto", "PBMC_HC_1"),
+   ("/home/alicen/2024/PBMC/PBMC_HC_2/velocyto", "PBMC_HC_2")
 ]
 
 # Loop to run each sample 
