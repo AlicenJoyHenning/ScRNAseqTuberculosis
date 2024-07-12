@@ -1,4 +1,3 @@
- 
 # 1. PreProcess ####
 # Function for healthy controls manual selection of damaged cells
 
@@ -580,24 +579,6 @@ cont_PreProcess <- function(
       cat(column, " not found\n") }
   }
 
-
-  # Timing function
-  end_time <- Sys.time()
-  time <- (end_time - start_time)
-  time_output <- as.character(round(time, digits = 2))
-  cat(paste("TIME:", time_output, "\n"))
-
-  PreProcess_output[nrow(PreProcess_output) + 1, ] = list(
-
-    Sample_name   = project_name,                         # Sample_name
-    Doublets      = Doublet_cells,                        # Doublets
-    Final_cells   = Remaining_cells,                      # final cells
-    Time          = time_output                           # Time
-
-  )
-
-  assign("PreProcess_output", PreProcess_output, envir = .GlobalEnv)
-
   return(list(
     seuratObject = seurat,
     CellQualityFiltering = scatter,
@@ -609,10 +590,10 @@ cont_PreProcess <- function(
 PBMC_HC_1 <- PBMC_HC_1$seuratObject
 PBMC_HC_2 <- PBMC_HC_2$seuratObject
 
-cont_PreProcess(PBMC_HC_1, "PBMC_HC_1")
-cont_PreProcess(PBMC_HC_2, "PBMC_HC_2")
+PBMC_HC_1 <- cont_PreProcess(PBMC_HC_1, "PBMC_HC_1")
+PBMC_HC_2 <- cont_PreProcess(PBMC_HC_2, "PBMC_HC_2")
 
-PBMC_HC_1$CellQualityFiltering
-PBMC_HC_1$UMAP_markers
-PBMC_HC_2$CellQualityFiltering
-PBMC_HC_2$UMAP_markers
+PBMC_HC_1$CellQualityFiltering | PBMC_HC_2$CellQualityFiltering
+PBMC_HC_1$MarkerVisualisation
+PBMC_HC_2$MarkerVisualisation
+
