@@ -1,5 +1,5 @@
 # Library
-library(Seurat)
+library(Seurat) # change
 library(magrittr)
 
 # 1. Read in individual objects for integration ####
